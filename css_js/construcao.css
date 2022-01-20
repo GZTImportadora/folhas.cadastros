@@ -1,0 +1,13 @@
+*{
+    padding: 1px;
+    margin: 1px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: Arial;
+    background: url("../imagens/paginaemconstrucao.png");
+    background-size: 96%;   
+}

@@ -1,0 +1,56 @@
+*{
+    padding: 1px;
+    margin: 1px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: Arial;
+    background: url("../imagens/fundo.jpg");
+    background-size: 100%;
+}
+
+input {
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+select{  
+    border: none;
+    border-bottom: solid 1px black;
+}
+
+@media print{
+    .no-print, .no-print * {
+        display: none!important;
+    }
+}
+
+button{
+    position: relative;
+    text-align: center;
+    background-color: rgb(60, 142, 236) ;
+    top: 20px;
+    border: none;
+    width: 80px;
+    height: 22px;
+    color: white;
+    font-size: medium;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: rgba(52, 120, 199, 0.925);
+    font-weight: bolder;
+}
+
+#nome, #RH {
+    border: none;
+}
+
+
+
+
+    
