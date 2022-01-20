@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title id="title">GZT - Liberação de Pedidos</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../imagens/ico.ico" />
+    <link rel="stylesheet" href="../css_js/estilo2.css">
+    <script src="../css_js/funcao_folha.js"></script>
+
+</head>
+
+<body style="font-size: small;">
+    <div style="background-color: white; width: 99%; height: 7.5%; position: absolute;">
+        <tr>
+            <td>
+                <img src="../imagens/logo3.png" alt="" style="position: relative; width: 198px; height: 54px; ">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="position: absolute; left: 250px; top: 10px;">Liberação de Pedido</h2>
+            </td>
+        </tr>
+    </div>
+    <br><br><br><br><br><br>
+    <div>
+        <form action="">
+            <table>
+                <tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Cliente:</label>
+                        <input type="text" style="width: 68%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">CNPJ:</label>
+                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,cpfCnpj)'
+                            onblur='clearTimeout()' placeholder="Digite o CNPJ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Valor R$:</label>
+                        <input type="text">
+                    </td>
+                    <td colspan="3" id="trocar">
+                        <label for="">Cond. Pagamento:</label>
+                        <input type="text" style="width: 60%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Digitado:</label>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Nº do pedido:</label>
+                        <input type="number">
+                    </td>
+                    <td>
+                        <label for="">Data:</label>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type="radio" id="chec" name="chec" value="opc1">
+                        <label for="">Telemarketing</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="chec" name="chec" value="opc2">
+                        <label for="">Feira</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="chec" name="chec" value="opc3">
+                        <label for="">Novo</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" id="chec" name="chec" value="opc4">
+                        <label for="">Representante:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" style="width: 58%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <textarea name="" id="" cols="80" rows="8" placeholder="Observações:"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Cliente desde:</label>
+                        <input type="date">
+                    </td>
+                    <td>
+                        <label for="">Maior Atraso:</label>
+                        <input type="text">
+                    </td>
+                    <td colspan="2">
+                        <label for="">Nº de compras:</label>
+                        <input type="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Valor em aberto R$:</label>
+                        <input type="text" style="width: 40%;">
+                    </td>
+                    <td colspan="2">
+                        <label for="">Valor pago R$:</label>
+                        <input type="text">
+                    </td>
+                </tr>
+                <div>
+                    <tr>
+                        <td colspan="2">
+
+                            <br><br><br>
+                            <label for="">Aprovado por:__________________________</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><br>
+                            <label for="">Limite:__________________________</label>
+                        </td>
+                        <td>
+                            <br><br><br>
+                            <label>Data:__________________________</label>
+                        </td>
+                    </tr>
+                </div>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </table>
+    </form>
+    </div>
+    <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
+    <button class="no-print" onclick="window.history.back()"> Voltar </button>
+    <br class="no-print">
+    <br class="no-print">
+    <br class="no-print">
+
+
+
+</body>
+
+</html>

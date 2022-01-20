@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>GZT - Folha Rosto</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../imagens/ico.ico" />
+    <link rel="stylesheet" href="../css_js/estilo_folha.css">
+    <script src="../css_js/funcao_folha.js"></script>
+
+</head>
+
+<body id="pagina">
+    <div style="background-color: white; width: 99%; height: 7.5%; position: absolute;">
+        <tr>
+            <td>
+                <img id="logo1" src="../imagens/logo3.png" alt="" style="position: relative; width: 198px; height: 54px;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="position: absolute; left: 250px; top: 10px;">Folha Rosto Cadastro de Cliente</h2>
+            </td>
+        </tr>
+    </div>
+    <br>
+    <br>
+    <a href="" style="position: absolute; left: 568px; top: 80px;"> Código Cliente:</a>
+                <input type="number" style="position: absolute; left: 680px; top: 80px; width: 123px;">
+    <div style=" position: relative; width: 44.5%; height: 600px; top: 60px; ">
+        <form action="">
+            <table style=" border: solid black 1px;">
+                <tr>
+                <tr>
+                    <td colspan="4">
+                        <label for="">Razão Social:</label>
+                        <input type="text" style=" width: 80%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Nome Fantasia:</label>
+                        <input type="text" style="width: 70%;">
+                    </td>
+                    <td>
+                        <label for="">Nºde Filiais:</label>
+                        <input type="number" style="width: 15%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Endereço:</label>
+                        <br>
+                        <input type="text" style="width: 120%;" id="ende0">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Bairro:</label>
+                        <input type="text" style="width: 70%;">
+                    </td>
+                    <td colspan="2" style="position: relative; left: 2%;">
+                        <label for="">Cidade:</label>
+                        <input type="text" id="cida0">
+                    </td>
+                    <td colspan="1" style="position: relative; left: -8%;">
+                        <label for="">UF:</label>
+                        <select name="UF0" id="UF0">
+                            <option value="0"> </option>
+                            <option value="1"> AC </option>
+                            <option value="2"> AL </option>
+                            <option value="3"> AM </option>
+                            <option value="4"> AP </option>
+                            <option value="5"> BA </option>
+                            <option value="6"> CE </option>
+                            <option value="7"> DF </option>
+                            <option value="8"> ES </option>
+                            <option value="9"> GO </option>
+                            <option value="10"> MA </option>
+                            <option value="11"> MG </option>
+                            <option value="12"> MS </option>
+                            <option value="13"> MT </option>
+                            <option value="14"> PA </option>
+                            <option value="15"> PB </option>
+                            <option value="16"> PE </option>
+                            <option value="17"> PI </option>
+                            <option value="18"> PR </option>
+                            <option value="19"> RJ </option>
+                            <option value="20"> RN </option>
+                            <option value="21"> RO </option>
+                            <option value="22"> RR </option>
+                            <option value="23"> RS </option>
+                            <option value="24"> SC </option>
+                            <option value="25"> SE </option>
+                            <option value="26"> SP </option>
+                            <option value="27"> TO </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">CEP:</label>
+                        <input type="text" id="cep0" style="width: 45%;">
+                    </td>
+                    <td colspan="2">
+                        <label for="">E-mail:</label>
+                        <input type="text" style="width: 80%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">CGCMF:</label>
+                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,cpfCnpj)' onblur='clearTimeout()' placeholder="Digite o CNPJ">
+                    </td>
+                    <td colspan="2">
+                        <select name="IE" id="IE">
+                            <option value="0">Insc. Estadual: </option>
+                            <option value="1">Insc. Municipal: </option>
+                        </select>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="chec">Endereço para cobrança:</label>
+                        <input type="checkbox" onclick="preenche()" id="chec">
+                        <label for="">Mesmo Endereço </label>
+                        <br>
+                        <input type="text" style="width: 120%;" id="end1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">CEP:</label>
+                        <input type="text" id="cep1" style="width: 45%;">
+                    </td>
+                    <td colspan="2">
+                        <label for="">Cidade:</label>
+                        <input type="text" id="cida1">
+                    </td>
+                    <td>
+                        <label for="">UF:</label>
+                        <select name="UF1" id="UF1">
+                            <option value="0"> </option>
+                            <option value="1"> AC </option>
+                            <option value="2"> AL </option>
+                            <option value="3"> AM </option>
+                            <option value="4"> AP </option>
+                            <option value="5"> BA </option>
+                            <option value="6"> CE </option>
+                            <option value="7"> DF </option>
+                            <option value="8"> ES </option>
+                            <option value="9"> GO </option>
+                            <option value="10"> MA </option>
+                            <option value="11"> MG </option>
+                            <option value="12"> MS </option>
+                            <option value="13"> MT </option>
+                            <option value="14"> PA </option>
+                            <option value="15"> PB </option>
+                            <option value="16"> PE </option>
+                            <option value="17"> PI </option>
+                            <option value="18"> PR </option>
+                            <option value="19"> RJ </option>
+                            <option value="20"> RN </option>
+                            <option value="21"> RO </option>
+                            <option value="22"> RR </option>
+                            <option value="23"> RS </option>
+                            <option value="24"> SC </option>
+                            <option value="25"> SE </option>
+                            <option value="26"> SP </option>
+                            <option value="27"> TO </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">DDD:</label>
+                        <input type="text" style="width: 15%;">
+                    </td>
+                    <td style="position: relative; left: -13%;">
+                        <label for="" >Fone:</label>
+                        <input type="text" style="width: 65%;" >
+                    </td>
+                    <td style="position: relative; left: -13%;">
+                        <label for="">WhatsApp:</label>
+                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()' style="width: 56%;" >
+                    </td>
+                    <td style="position: relative; left: 2%;">
+                        <label for="">Data Fundação:</label>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Ramo de Negócio:</label>
+                        <input type="text" style="width: 70%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Principais Produtos Vendidos:</label>
+                        <input type="text" style="width: 60%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Comprador:</label>
+                        <input type="text" style="width: 60%;">
+                    </td>
+                    <td colspan="2">
+                        <label for="">Data Nascto:</label>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <label for="">Capital Social:</label>
+                        <input type="text" style="width: 70%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <b><label for="">Principais fornecedores: </label></b>
+                        <br>
+                        <label for="">Nome</label>
+                        <br>
+                        <input type="text" style="width: 98%;" id="fornecedor">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                        <br>
+                        <input type="text" style="width: 98%;">
+                    </td>
+                    <td>
+                        <br>
+                        <label for="">Cidade</label>
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <br>
+                        <label for="">Fone</label>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b><label for="">Bancos que Opera: </label></b>
+                        <br>
+                        <label for="">Nome / Agência </label>
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <br>
+                        <label for="">Cidade</label>
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <br>
+                        <label for="">Fone</label>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                        <br>
+                        <input type="text" onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()'>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <b>
+                            <legend>USO INTERNO</legend>
+                        </b>
+                        <textarea name="" id="" cols="110" rows="12"></textarea>
+                    </td>
+                </tr>
+                </tr>
+            </table>
+        </form>
+        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
+        <button class="no-print" onclick="window.history.back()"> Voltar </button>
+        <br class="no-print">
+        <br class="no-print">
+        <br class="no-print">
+        
+
+
+    </div>
+
+</body>
+
+</html>
