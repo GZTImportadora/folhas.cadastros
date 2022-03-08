@@ -175,6 +175,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <div id="img-container">
+                            <center><img id="preview" src="" style="width: 40%; position: relative; left: 100px; top: 40px;"></center>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
                     <td style="position:relative; left: 30%;"> <a href=""></a>
                         <label for="">_________________________</label>
                     </td>
@@ -218,14 +226,32 @@
                 </tr>
 
             </table>
+            <div class="no-print">
+                <br>
+                <br>
+                <p>Para assinar documento selecione a assinatura abaixo em formato PNG</p>
+                <br>
+            </div>
+            <div class="no-print">
+                <input type=file id="img-input" name="imagem" accept="image/png">
+            </div>
+            <script>
+                document.getElementById("img-input").addEventListener("change", readImage, false);
+            </script>
+
 
         </form>
-        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
+        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">Salvar</button>
         <button class="no-print" onclick="window.history.back()"> Voltar </button>
         <br class="no-print">
         <br class="no-print">
         <br class="no-print">
-        
+
+
+
+
+
+
 
     </div>
 
