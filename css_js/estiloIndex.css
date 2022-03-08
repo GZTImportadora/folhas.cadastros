@@ -78,6 +78,12 @@ a{
     display: none;
   }
 
+  .versao {
+    text-align: left;
+    
+  
+  }
+
   /* --------------------------------------------------------------------------------- */
 
   .orbit-spinner, .orbit-spinner * {
