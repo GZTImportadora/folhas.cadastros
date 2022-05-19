@@ -10,7 +10,7 @@ a{
 }
 
 a:hover{
-    background: #1191db;
+    background: rgb(160, 21, 21);
     color: white;
 }
 
@@ -26,7 +26,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #45A8E1;
+    background:rgba(199, 52, 52, 0.925);
 }
 
 #menu{
@@ -38,7 +38,7 @@ a:hover{
 #menu a {
     display: block;
     padding: .5rem;
-    border-radius: 30px;
+    border-radius: 10px;
     font-weight: bolder;
 }
 

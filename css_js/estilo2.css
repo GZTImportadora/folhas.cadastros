@@ -5,7 +5,7 @@ a{
 }
 body{
     font-family: Arial;
-    background: url("../imagens/fundo.jpg");
+    background-color: rgb(206, 205, 205);
     background-size: 100%;
 }
 
@@ -27,18 +27,18 @@ select{
 button{
     position: relative;
     text-align: center;
-    background-color: rgb(60, 142, 236) ;
+    background-color: rgb(160, 21, 21) ;
     top: 20px;
     border: none;
     width: 80px;
     height: 22px;
     color: white;
     font-size: medium;
-    border-radius: 30px;
+    border-radius: 10px;
     font-weight: bolder;
 }
 button:hover{
-    background-color: rgba(52, 120, 199, 0.925);
+    background-color: rgba(199, 52, 52, 0.925);
     font-weight: bolder;
 }
 
