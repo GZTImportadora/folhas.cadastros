@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../imagens/ico.ico" />
     <link rel="stylesheet" href="../css_js/estilo_folha.css">
     <script src="../css_js/funcao_folha.js"></script>
+    <script src="../css_js/gerarPDF.js"></script>
 
 </head>
 
@@ -14,7 +15,7 @@
     <div style="width: 99%; height: 7.5%; position: absolute;">
         <tr>
             <td>
-                <img src="../imagens/logo3.png" alt="" style="position: relative; width: 228px; height: 84px; ">
+                <img src="../imagens/logogzt.png" alt="" style="position: relative; width: 280px; height: 64px; ">
             </td>
         </tr>
         <tr>
@@ -163,6 +164,7 @@
                 </tr>
             </table>
         </form>
+        <button class="no-print" onclick="gerarpdf()" style="font-size: 10pt;">Gerar PDF</button>
         <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
         <button class="no-print" onclick="window.history.back()"> Voltar </button>
         <br class="no-print">

@@ -6,15 +6,17 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="../imagens/ico.ico" />
     <link rel="stylesheet" href="../css_js/estilo_folha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
     <script src="../css_js/funcao_folha.js"></script>
+    <script src="../css_js/gerarPDF.js"></script>
+    
 
 </head>
-
 <body id="pagina">
-    <div style="background-color: white; width: 99%; height: 7.5%; position: absolute;">
+    <div style="width: 99%; height: 7.5%; position: absolute;" id="renderPDF" class="container">
         <tr>
             <td>
-                <img id="logo1" src="../imagens/logo3.png" alt="" style="position: relative; width: 198px; height: 54px;">
+                <img id="logo1" src="../imagens/logo_folhas.png" alt="" style="position: relative; width: 90px; height: 80px;">
             </td>
         </tr>
         <tr>
@@ -183,9 +185,9 @@
                     </td>
                     <td style="position: relative; left: -13%;">
                         <label for="">WhatsApp:</label>
-                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()' style="width: 56%;" >
+                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,fone)' onblur='clearTimeout()' style="width: 52%;" >
                     </td>
-                    <td style="position: relative; left: 2%;">
+                    <td style="position: relative; left: -8%;" colspan="2">
                         <label for="">Data Fundação:</label>
                         <input type="date">
                     </td>
@@ -349,6 +351,7 @@
                 </tr>
             </table>
         </form>
+        <button class="no-print" onclick="gerarpdf()" style="font-size: 10pt;">Gerar PDF</button>
         <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
         <button class="no-print" onclick="window.history.back()"> Voltar </button>
         <br class="no-print">

@@ -7,14 +7,15 @@
     <link rel="shortcut icon" href="../imagens/ico.ico" />
     <link rel="stylesheet" href="../css_js/estilo2.css">
     <script src="../css_js/funcao_folha.js"></script>
+    <script src="../css_js/gerarPDF.js"></script>
 
 </head>
 
 <body style="font-size: small;">
-    <div style="background-color: white; width: 99%; height: 7.5%; position: absolute;">
+    <div style="width: 99%; height: 7.5%; position: absolute;">
         <tr>
             <td>
-                <img src="../imagens/logo3.png" alt="" style="position: relative; width: 198px; height: 54px; ">
+                <img src="../imagens/logo_folhas.png" alt="" style="position: relative; width: 90px; height: 80px;">
             </td>
         </tr>
         <tr>
@@ -94,12 +95,18 @@
                         <label for="">Cliente desde:</label>
                         <input type="date">
                     </td>
+                    <td colspan="">
+                        <label for="">Nº de compras:</label>
+                        <input type="number">
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <label for="">Maior Atraso:</label>
                         <input type="text">
                     </td>
-                    <td colspan="2">
-                        <label for="">Nº de compras:</label>
+                    <td>
+                        <label for="">Atraso Médio em dias::</label>
                         <input type="number">
                     </td>
                 </tr>
@@ -112,6 +119,7 @@
                         <label for="">Valor pago R$:</label>
                         <input type="text">
                     </td>
+                  
                 </tr>
                 <div>
                     <tr>
@@ -139,6 +147,7 @@
     </table>
     </form>
     </div>
+    <button class="no-print" onclick="gerarpdf()" style="font-size: 10pt;">Gerar PDF</button>
     <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
     <button class="no-print" onclick="window.history.back()"> Voltar </button>
     <br class="no-print">

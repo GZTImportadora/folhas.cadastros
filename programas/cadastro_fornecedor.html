@@ -7,14 +7,15 @@
     <link rel="shortcut icon" href="../imagens/ico.ico" />
     <link rel="stylesheet" href="../css_js/estilo_folha.css">
     <script src="../css_js/funcao_folha.js"></script>
+    <script src="../css_js/gerarPDF.js"></script>
 
 </head>
 
 <body>
-    <div style="background-color: white; width: 99%; height: 7.5%; position: absolute;">
+    <div style="width: 99%; height: 7.5%; position: absolute;">
         <tr>
             <td>
-                <img src="../imagens/logo3.png" alt="" style="position: relative; width: 198px; height: 54px; ">
+                <img src="../imagens/logo_folhas.png" alt="" style="position: relative; width: 90px; height: 80px;">
             </td>
         </tr>
         <tr>
@@ -23,7 +24,7 @@
             </td>
         </tr>
     </div>
-    <br>
+    <br><br>
     <div style=" position: relative; width: 44.5%; height: 600px; top: 60px; ">
         <form action="">
             <table style="border: solid 1px black;">
@@ -229,7 +230,7 @@
             <div class="no-print">
                 <br>
                 <br>
-                <p>Para assinar documento selecione a assinatura abaixo em formato PNG</p>
+                <p>Você pode assinar o documento como Gerente da Area, so selecionar a assinatura a baixo.</p>
                 <br>
             </div>
             <div class="no-print">
@@ -241,7 +242,8 @@
 
 
         </form>
-        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">Salvar</button>
+        <button class="no-print" onclick="gerarpdf()" style="font-size: 10pt;">Gerar PDF</button>
+        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">Imprimir</button>
         <button class="no-print" onclick="window.history.back()"> Voltar </button>
         <br class="no-print">
         <br class="no-print">

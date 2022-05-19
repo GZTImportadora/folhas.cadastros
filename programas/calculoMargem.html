@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Calculo Margem</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css_js/margem.css">
+    <script type="text/javascript" src="../css_js/jquery-3.6.0.min.js"></script>
+    <script src="../css_js/calculo_margem.js"></script>
+
+
+
+</head>
+
+<body>
+    <br>
+    <h2 style="text-align: center;">Cálculo de Margem</h2>
+   
+    <h4 style="text-align: center;">Margem (retirar ICMS para produtos com ST)</h4>
+  
+    <h5 style="text-align: center;">* custo financeiro P.L. + 6%</h5>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <label>ICMS venda</label>
+                    <input type="number" id="campo1" class="pula" name="campo1">
+                    <label for="">%</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Custo liquido</label>
+                    <input type="number" id="campo2" class="pula" name="campo2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Preço tabela</label>
+                    <input type="number" id="campo3" class="pula" name="campo3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="" id="tela"></label>
+                </td>
+            </tr>
+            <table>
+                <tr>
+                    <td><button onclick="calcular()" id="campo4" class="pula" name="campo4">Calcular</button></td>
+                    <td><button onclick="limpar()">Limpar</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="width: 184px; display: none;" onclick="sugerir()">Sugestão de Preço</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> 
+                        <br>
+                        <select name="cmpMarge" id="cmpMarge" onclick="opcao()">
+                            <option value="" style="color: grey;">Selecione</option>
+                            <option value="14">Margem 2%</option>
+                            <option value="1">Margem 5%</option>
+                            <option value="2">Margem 10%</option>
+                            <option value="3">Margem 15%</option>
+                            <option value="4">Margem 20%</option>
+                            <option value="5">Margem 25%</option>
+                            <option value="6">Margem 28%</option>
+                            <option value="7">Margem 30%</option>
+                            <option value="8">Margem 33%</option>
+                            <option value="9">Margem 35%</option>
+                            <option value="10">Margem 40%</option>
+                            <option value="11">Margem 45%</option>
+                            <option value="12">Margem 50%</option>
+                            <option value="13">Margem 60%</option>
+                          </select>
+                    </td>
+                </tr>
+
+            </table>
+        </table>
+        <br>
+        <br>
+        <br>
+        <table id="tabela">
+            <tr>
+                <th>Desconto</th>
+                <th>R$ venda</th>
+                <th>R$ s/ imp</th>
+                <th>Lucro</th>
+                <th>Margem</th>
+            </tr>
+            <tr>
+                <td id="li" style="color: red;">0%</td>
+                <td id="li1" style="color: red;">0,00</td>
+                <td id="li2" style="color: red;">0,00</td>
+                <td id="li3" style="color: red;">0,00</td>
+                <td id="li4" style="color: red;">0,00</td>
+            </tr>
+            <tr>
+                <td id="lia">2%</td>
+                <td id="li5">0,00</td>
+                <td id="li6">0,00</td>
+                <td id="li7">0,00</td>
+                <td id="li8">0,00</td>
+            </tr>
+            <tr>
+                <td id="lib">5%</td>
+                <td id="li9">0,00</td>
+                <td id="li10">0,00</td>
+                <td id="li11">0,00</td>
+                <td id="li12">0,00</td>
+            </tr>
+            <tr>
+                <td id="lic">10%</td>
+                <td id="li13">0,00</td>
+                <td id="li14">0,00</td>
+                <td id="li15">0,00</td>
+                <td id="li16">0,00</td>
+            </tr>
+            <tr>
+                <td id="lid" style="background-color: rgb(80, 177, 80); font-weight: bolder;">15%</td>
+                <td id="li17" style="background-color: rgb(80, 177, 80); font-weight: bolder;">0,00</td>
+                <td id="li18" style="background-color: rgb(80, 177, 80); font-weight: bolder;">0,00</td>
+                <td id="li19" style="background-color: rgb(80, 177, 80); font-weight: bolder;">0,00</td>
+                <td id="li20" style="background-color: rgb(80, 177, 80); font-weight: bolder;">0,00</td>
+            </tr>
+            <tr>
+                <td id="lid1">20%</td>
+                <td id="li21">0,00</td>
+                <td id="li22">0,00</td>
+                <td id="li23">0,00</td>
+                <td id="li24">0,00</td>
+            </tr>
+            <tr>
+                <td id="lie">25%</td>
+                <td id="li25">0,00</td>
+                <td id="li26">0,00</td>
+                <td id="li27">0,00</td>
+                <td id="li28">0,00</td>
+            </tr>
+            <tr>
+                <td id="lif" style=" font-weight: bolder;">28%</td>
+                <td id="li29" style=" font-weight: bolder;">0,00</td>
+                <td id="li30" style=" font-weight: bolder;">0,00</td>
+                <td id="li31" style=" font-weight: bolder;">0,00</td>
+                <td id="li32" style=" font-weight: bolder;">0,00</td>
+            </tr>
+            <tr>
+                <td id="lig">30%</td>
+                <td id="li33">0,00</td>
+                <td id="li34">0,00</td>
+                <td id="li35">0,00</td>
+                <td id="li36">0,00</td>
+            </tr>
+            <tr>
+                <td id="lih">33%</td>
+                <td id="li37">0,00</td>
+                <td id="li38">0,00</td>
+                <td id="li39">0,00</td>
+                <td id="li40">0,00</td>
+            </tr>
+            <tr>
+                <td id="lii">35%</td>
+                <td id="li41">0,00</td>
+                <td id="li42">0,00</td>
+                <td id="li43">0,00</td>
+                <td id="li44">0,00</td>
+            </tr>
+            <tr>
+                <td id="lij">40%</td>
+                <td id="li45">0,00</td>
+                <td id="li46">0,00</td>
+                <td id="li47">0,00</td>
+                <td id="li48">0,00</td>
+            </tr>
+            <tr>
+                <td id="lik">45%</td>
+                <td id="li49">0,00</td>
+                <td id="li50">0,00</td>
+                <td id="li51">0,00</td>
+                <td id="li52">0,00</td>
+            </tr>
+            <tr>
+                <td id="lil">50%</td>
+                <td id="li53">0,00</td>
+                <td id="li54">0,00</td>
+                <td id="li55">0,00</td>
+                <td id="li56">0,00</td>
+            </tr>
+            <tr>
+                <td id="lim">60%</td>
+                <td id="li57">0,00</td>
+                <td id="li58">0,00</td>
+                <td id="li59">0,00</td>
+                <td id="li60">0,00</td>
+            </tr>
+        </table>
+
+
+
+    </center>
+
+
+</body>
+
+</html>
