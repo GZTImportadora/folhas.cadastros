@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>GZT - Adiantamento despesa</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../imagens/ico.ico" />
+    <link rel="stylesheet" href="../css_js/estilo_folha.css">
+    <script src="../css_js/funcao_folha.js"></script>
+    <script src="../css_js/gerarPDF.js"></script>
+
+
+</head>
+
+<body>
+    <div style="width: 99%; height: 7.5%; position: absolute;">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <img src="../imagens/logogzt.png" alt=""
+                            style="position: relative; width: 280px; height: 64px; ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1 style="position: absolute; left: 250px; top: 120px;">Adiantamento para despesa</h1>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div style=" position: relative; width: 80%; height: 600px; top: 60px; ">
+        <form action="">
+            <table style="width: 800px;">
+                <tr>
+                    <td>
+                        <br><br><br><br><br><br><br>
+                        <label for="" style="font-size: 15pt; font-weight: bold; ">Valor:</label>
+                        <input type="text" id="form-area-imovel" class="form-control"
+                            style="font-size: 15pt; font-weight: bold;">
+                        <script src="../css_js/folha_adiantamento.js"></script>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br>
+                        <label for="">Valor por extenso: </label>
+                        <br>
+                        <input type="text" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <label for="">Nome:</label>
+                        <br>
+                        <input type="text" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br>
+                        <label for="">Este valor sera usado para:</label>
+                        <br>
+                        <input type="text" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <label for="">Data da Saída: </label>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Data da Chegada: </label>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <label for="">Cheque</label>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label for=""> Depósito Bancário: </label>
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Banco:</label>
+                        <br>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <label for="">Agência:</label>
+                        <br>
+                        <input type="number">
+                    </td>
+                    <td>
+                        <label for="">Conta:</label>
+                        <br>
+                        <input type="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">CPF:</label>
+                        <input type='text' name='cpfcnpj' onkeypress='mascaraMutuario(this,cpfCnpj)' onblur='clearTimeout()' placeholder="Digite o CPF">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br><br><br><br><br>
+                        <label for="">&nbsp;&nbsp;_________________________</label>
+                    </td>
+                    <td>
+                        <br><br><br><br><br>
+                        <label for="">&nbsp;&nbsp;_________________________</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="" style="font: menu;">&nbsp;&nbsp;Autorizado por</label>
+                    </td>
+                    <td>
+                        <label for="" style="font: menu;">&nbsp;&nbsp;Ass. Recebedor</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <button class="no-print" onclick="gerarpdf()" style="font-size: 10pt;">Gerar PDF</button>
+        <button class="no-print" name="imprime" id="imprime" onclick="window.print()">imprimir</button>
+        <button class="no-print" onclick="window.history.back()"> Voltar </button>
+        <br class="no-print">
+        <br class="no-print">
+        <br class="no-print">
+    </div>
+</body>
+
+</html>
